@@ -7,6 +7,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(rgb(225, 225, 149), rgb(142, 219, 156));
+  background-repeat: round;
 }
 h1 {
   text-align: center;
@@ -140,4 +141,74 @@ h1 {
   color: white;
   background-color: rgb(1, 94, 1);
   border-radius: 10px;
+}
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .gameSection {
+    width: 95%;
+  }
+
+  .Board {
+    display: grid;
+    grid-template-columns: 6vw 6vw 6vw;
+    grid-template-rows: 6vw 6vw 6vw;
+    gap: 0.2rem;
+  }
+
+  .board {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+
+  .board:hover {
+    border-radius: 4px;
+    background-color: rgb(197, 155, 233);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.778);
+  }
+  .btn {
+    font-size: 1.1rem;
+  }
+  .btn:hover {
+    font-size: 1.1rem;
+    width: 11vw;
+    font-weight: 700;
+    background-image: linear-gradient(
+      90deg,
+      rgba(161, 44, 167, 0.958),
+      rgba(255, 0, 0, 0.937)
+    );
+  }
+
+  .Verdict {
+    font-size: 1.2rem;
+  }
+
+  .userChoice {
+    flex-direction: column;
+  }
+
+  .gbtn,
+  .YN {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 5%;
+  }
+  .gbtn:hover {
+    font-size: 0.5rem;
+  }
+
+  .play {
+    width: 80%;
+  }
+  .ResetBtn {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .winnerStyle {
+    border: 2px dashed rgb(2, 75, 13);
+    color: white;
+    background-color: rgb(1, 94, 1);
+    border-radius: 2px;
+  }
 }
